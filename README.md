@@ -35,7 +35,7 @@ Run the custom OpenCPU Docker image:
 
 `docker run --name opencpu --link mysql:mysql -v $(pwd)/odbc.ini:/etc/odbc.ini -p 8004:8004 -d savvydatainsights/opencpu-mysql`
 
-Enter the OpenCPU container:
+Enter into the OpenCPU container:
 
 `docker exec -it opencpu bash`
 
@@ -45,7 +45,7 @@ Execute the command (if your odbc.ini section is other than DSN, replace it acco
 
 The output must be something like:
 
-```bash
+```
 +---------------------------------------+
 | Connected!                            |
 |                                       |
