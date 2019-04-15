@@ -1,0 +1,43 @@
+version: '3'
+services:
+
+  mysql:
+    image: mysql:8.0.15
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=data_analysis
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password
+
+  mysql_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mysql_admin
+    restart: always
+    environment:
+      - PMA_HOST=mysql
+    volumes:
+      - mysql_admin_data:/sessions
+    ports:
+      - 9080:80
+    depends_on:
+      - mysql
+
+  opencpu:
+    build: .
+    image: savvydatainsights/opencpu-mysql
+    container_name: opencpu
+    restart: always
+    volumes:
+      - ./odbc.ini:/etc/odbc.ini
+    ports:
+      - 8004:8004
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+  mysql_admin_data:
