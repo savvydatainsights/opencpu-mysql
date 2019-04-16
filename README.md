@@ -1,10 +1,12 @@
 # opencpu-mysql
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Docker Build status](https://img.shields.io/docker/build/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql)
+
 Custom OpenCPU Docker image prepared for connecting to a MySQL database instance.
 
 ## Build command
 
-docker build -t savvydatainsights/opencpu-mysql .
+`docker build -t savvydatainsights/opencpu-mysql .`
 
 ## Requirements
 
@@ -27,7 +29,7 @@ The other values must be set according to the connection parameters of your MySQ
 
 ## Test
 
-Run a MYSQL Docker image:
+Run a MySQL Docker image:
 
 `docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=data_analysis -p 3306:3306 -d mysql:8.0.15`
 
@@ -56,3 +58,13 @@ The output must be something like:
 +---------------------------------------+
 SQL>
 ```
+
+## Compose
+
+An alternative to run each Docker image separatedly is executing:
+
+`docker-compose up -d`
+
+If the Docker image don't exist locally, it will be built automatically. If you prefer to download it from [Docker Hub](https://hub.docker.com/r/savvydatainsights/opencpu-mysql), run before:
+
+`docker pull savvydatainsights/opencpu-mysql`
