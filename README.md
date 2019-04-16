@@ -65,6 +65,6 @@ An alternative to run each Docker image separatedly is executing:
 
 `docker-compose up -d`
 
-If the Docker image don't exist locally, it will be built automatically. If you prefer to download it from [Docker Hub](https://hub.docker.com/r/savvydatainsights/opencpu-mysql), run before:
+If the Docker image doesn't exist locally, it will be built automatically. If you prefer to download it from [Docker Hub](https://hub.docker.com/r/savvydatainsights/opencpu-mysql), run before:
 
 `docker pull savvydatainsights/opencpu-mysql`
