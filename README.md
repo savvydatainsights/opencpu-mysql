@@ -1,6 +1,6 @@
 # opencpu-mysql
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Docker Build status](https://img.shields.io/docker/build/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Docker Build status](https://img.shields.io/docker/cloud/build/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql/builds) [![Docker Pulls](https://img.shields.io/docker/pulls/savvydatainsights/opencpu-mysql.svg)](https://hub.docker.com/r/savvydatainsights/opencpu-mysql)
 
 Custom OpenCPU Docker image prepared for connecting to a MySQL database instance.
 
